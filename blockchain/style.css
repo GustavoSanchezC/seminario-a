@@ -1,0 +1,76 @@
+/* Color del fondo */
+body {
+    background: lightblue;
+}
+
+/* Estilo de las etiquetas*/
+label{
+    margin: 10px;
+    font-size: 9;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilo de cuadro de texto de una linea (chica) */
+input{
+    margin: 2px;
+}
+
+/* Estilo de cuardo de texto de una linea (grande) */
+input.large-text{
+    width: 90%;
+    display: block;
+}
+
+/* Estilo de las transacciones */
+textarea{
+    font-size: 12pt;
+    display: block;
+    resize: none;
+    width: 95%;
+    height: 90%;
+}
+
+/* División en 2 columnas */
+.column {
+    float: left;
+    width: 50%;
+}
+
+/* Reiniciar la division */
+.block:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.node:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Formato númerico */
+span{
+    margin: 10px;
+    font-family: monospace;
+}
+
+/* Estilo de bloque minado */
+.node {
+    background: lightgray;
+    margin: 10px;
+    border: rgb(148, 148, 148);
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 10px;
+}
+
+/* Estilo de bloque sin minar */
+.block {
+    background: yellow;
+    margin: 10px;
+    border: black;
+    border-style: dashed;
+    border-width: 5px;
+    border-radius: 10px;
+}

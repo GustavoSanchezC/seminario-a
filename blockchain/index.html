@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blockchain Demo</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script type="text/javascript" src="Blockchain.js"></script>
+    <script type="text/javascript" src="BlockchainNode.js"></script>
+    <script type="text/javascript" src="Main.js"></script>
+  </head>
+
+  <body>
+    <h1>Blockchain Demo</h1>
+    <input type="button" value="Guardar JSON..." id="save-json">
+    <!-- Bloque borrador -->
+    <div class="block">
+      <form>
+        <div class="column">
+          <div>
+            <label for="block">Bloque</label>
+            <input type="text" size="5" name="block" id="block" disabled="" value="-1">
+          </div>
+          <div>
+            <label for="timestamp">Timestamp</label>
+            <input type="text" class="large-text" name="timestamp" id="timestamp" disabled="" value="129837921873">
+          </div>
+          
+          <div>
+            <label for="merkle">Merkle Root</label>
+            <input type="text" class="large-text" name="merkle" id="merkle" disabled="" value="0">
+          </div>
+          <div>
+            <label>Previous Hash</label>
+            <input type="text" class="large-text" name="phash" id="phash" disabled="" value="0000000000000000">
+          </div>
+          <br>
+          <div>
+            <label for="nonce">Nonce:</label>
+            <input type="text" size="10" name="nonce" id="nonce" disabled="" value="0">
+          </div>
+          <div>
+            <label for="Hash">Header hash</label>
+            <input type="text" class="large-text" name="hash" id="hash" disabled="" value="0">
+          </div>
+        </div>
+        <div class="column">
+          <div>
+            <label for="transactions">Transaction(s)</label>
+            <textarea name="Tx" id="transactions" cols="50" rows="10" onchange="createBlock(null)">
+//Specify the transactions as 
+
+  $money&from&to\n
+
+Example:
+
+  $50.03&Davidshiro&Pichu\n
+            </textarea>
+          </div>
+          <br>
+          <input type="button" value="Generate transaction" id="gt">
+        </div>
+      </form>
+    </div>
+
+    <input id="create-new-block" type="button" value="Crear nuevo bloque">
+    <input type="button" value="Minar ultimo bloque" id="block-mining">
+
+    <div id="blockchain">
+      <!-- Aquí se adjuntarán los bloques minados -->
+    </div>
+  </body>
+
+</html>
